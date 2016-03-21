@@ -7,9 +7,9 @@ var people = ToDoList.people;
 
 var tasks = [];
 
-tasks.push(new ToDoList.HomeTask("Do JS Homework", "High", people.nic));
-tasks.push(new ToDoList.HomeTask("Scan Tax stuff", "High", people.hamilton));
-tasks.push(new ToDoList.HomeTask("Scan Tax stuff", "High", people.nic));
+tasks.push(new ToDoList.HomeTask("Do JS Homework", "high", people.nic));
+tasks.push(new ToDoList.HomeTask("Scan Tax stuff", "high", people.hamilton));
+tasks.push(new ToDoList.HomeTask("Scan Tax stuff", "high", people.nic));
 tasks.push(new ToDoList.HomeTask("Install Hose Holder", "low"));
 
 tasks.push(new ToDoList.HobbyTask("Watch Daredevil"));
@@ -22,8 +22,8 @@ var nextDay = new Date();
 nextDay.setDate(today.getDate() + 2);
 
 tasks.push(new ToDoList.WorkTask(today, "Finish this lesson", "high", people.tanklin));
-tasks.push(new ToDoList.WorkTask(today, "Be good at Javascript", "High", people.nic));
-tasks.push(new ToDoList.WorkTask(today, "learnTypescript", "High", people.nic));
+tasks.push(new ToDoList.WorkTask(today, "Be good at Javascript", "high", people.nic));
+tasks.push(new ToDoList.WorkTask(today, "learnTypescript", "high", people.nic));
 tasks.push(new ToDoList.WorkTask(tomorrow, "learn Angular", "high", people.tanklin));
 tasks.push(new ToDoList.WorkTask(nextDay, "group work", "medium", people.nic));
 

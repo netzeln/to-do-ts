@@ -1,24 +1,6 @@
 /// <reference path="to-do-classes-interfaces.ts" />
 
 module ToDoList{
-  // export var listTasks = function(): String[]{
-  //   var descriptions: String[] = [];
-  //   for(var task of taskCollection){
-  //     descriptions.push(task.description);
-  //   }
-  //   return descriptions;
-  // }
-
-  $(document).ready (function(event){
-    $('#listAllTasks').click(function(event){
-      // var tasks = listTasks();
-console.log(Task);
-      console.log(tasks);
-      for (var task of tasks){
-        $('#list').append("<li>" + task.description + "</li>");
-      }
-    });
-  });
   export var describeTasksforPerson = function(assignee: IPerson, taskCollection: Task[]): String[] {
     var descriptions: String[] = [];
     for(var task of taskCollection){
@@ -45,4 +27,27 @@ console.log(Task);
    }
    return descriptions;
  }
+
+ $(document).ready (function(event){
+   $('#listAllTasks').click(function(event){
+
+     console.log(tasks);
+     for (var task of tasks){
+       $('#list').append("<li>" + task.description + "</li>");
+     }
+   });
+
+   $('#personTasks').click(function(event){
+     var name = $('#personName').val();
+
+     var tasksByPerson = describeTasksforPerson(people[name], tasks);
+     console.log(tasksByPerson);
+     $('#byPerson').empty();
+     for (var task of tasksByPerson){
+       $('#byPerson').append("<li>" + task + "</li>");
+     }
+   });
+
+   event.preventDefault;
+ });
 }
