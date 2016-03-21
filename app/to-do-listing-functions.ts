@@ -11,10 +11,13 @@ module ToDoList{
     return descriptions;
   }
 
-  // export var describeTasksofType = function(type: ITask, taskCollection: Task[]): String[]{
+  // export var describeTasksofType = function(type: string, taskCollection: Task[]): String[]{
   //   var descriptions: String[] = [];
   //   for(var task of taskCollection){
-  //     if(task.)
+  //     if( == type){
+  //       descriptions.push(task.description)
+  //     }
+  //     return descriptions;
   //   }
   // }
 
@@ -50,14 +53,24 @@ module ToDoList{
 
    $('#listByPriority').click(function(event){
      var priority = $('#priority').val();
-     console.log(priority);
+
      var tasksByPriority = describeTasksbyPriority(priority, tasks);
-     console.log(tasksByPriority);
+
      $('#byPriority').empty();
      for (var task of tasksByPriority){
        $('#byPriority').append("<li>" + task + "</li>");
      }
    });
+
+//    $('#typeTasks').click(function(event){
+//      var type = $('#type').val();
+//
+//      var tasksByType = describeTasksofType(type, tasks);
+// console.log(tasksByType);
+//      for(var task of tasksByType){
+//        $('#byType').append("<li>" + task + "</li>");
+//      }
+//    });
 
    event.preventDefault;
  });
