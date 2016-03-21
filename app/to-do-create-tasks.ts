@@ -27,10 +27,10 @@ tasks.push(new ToDoList.WorkTask(today, "learnTypescript", "High", people.nic));
 tasks.push(new ToDoList.WorkTask(tomorrow, "learn Angular", "high", people.tanklin));
 tasks.push(new ToDoList.WorkTask(nextDay, "group work", "medium", people.nic));
 
-console.log(tasks);
+// console.log(tasks);
 
-var nicTasks = ToDoList.describeTasksforPerson(people.nic, tasks);
-console.log("here's what nic needs to do: " );
-for(var task of nicTasks){
-    console.log(task);
-}
+// var nicTasks = ToDoList.describeTasksforPerson(people.nic, tasks);
+// console.log("here's what nic needs to do: " );
+// for(var task of nicTasks){
+//     console.log(task);
+// }
