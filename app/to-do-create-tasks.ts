@@ -8,7 +8,7 @@ var people = ToDoList.people;
 var tasks = [];
 
 tasks.push(new ToDoList.HomeTask("Do JS Homework", "high", people.nic));
-tasks.push(new ToDoList.HomeTask("Scan Tax stuff", "high", people.hamilton));
+tasks.push(new ToDoList.HomeTask("Scan Tax stuff", "medium", people.hamilton));
 tasks.push(new ToDoList.HomeTask("Scan Tax stuff", "high", people.nic));
 tasks.push(new ToDoList.HomeTask("Install Hose Holder", "low"));
 

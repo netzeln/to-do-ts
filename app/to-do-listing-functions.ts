@@ -18,11 +18,11 @@ module ToDoList{
   //   }
   // }
 
- export var describeTaskbyPriority = function(priority: string, taskCollection: Task[]): String[] {
+ export var describeTasksbyPriority = function(priority: string, taskCollection: Task[]): String[] {
    var descriptions: String[] = [];
    for(var task of taskCollection){
      if (task.priority === priority) {
-       descriptions.push(task.priority);
+       descriptions.push(task.description);
      }
    }
    return descriptions;
@@ -30,7 +30,7 @@ module ToDoList{
 
  $(document).ready (function(event){
    $('#listAllTasks').click(function(event){
-
+     $('#list').empty();
      console.log(tasks);
      for (var task of tasks){
        $('#list').append("<li>" + task.description + "</li>");
@@ -45,6 +45,17 @@ module ToDoList{
      $('#byPerson').empty();
      for (var task of tasksByPerson){
        $('#byPerson').append("<li>" + task + "</li>");
+     }
+   });
+
+   $('#listByPriority').click(function(event){
+     var priority = $('#priority').val();
+     console.log(priority);
+     var tasksByPriority = describeTasksbyPriority(priority, tasks);
+     console.log(tasksByPriority);
+     $('#byPriority').empty();
+     for (var task of tasksByPriority){
+       $('#byPriority').append("<li>" + task + "</li>");
      }
    });
 
